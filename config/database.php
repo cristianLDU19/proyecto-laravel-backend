@@ -41,11 +41,11 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '3301'),
-            'database' => env('DB_DATABASE', 'proyectoNuevasTecnicas'),
-            'username' => env('DB_USERNAME', 'root'),
-            'password' => env('DB_PASSWORD', '1234'),
+            'host' => env('DB_HOST', '	thzz882efnak0xod.cbetxkdyhwsb.us-east-1.rds.amazonaws.com'),
+            'port' => env('DB_PORT', '3306'),
+            'database' => env('DB_DATABASE', 'b4fk25vffm4g2a19'),
+            'username' => env('DB_USERNAME', 'iefpbpr4u6c0z674'),
+            'password' => env('DB_PASSWORD', 'cmmuadt2s8fvrcol'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
