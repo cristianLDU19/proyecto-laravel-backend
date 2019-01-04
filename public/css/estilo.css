@@ -1,0 +1,21 @@
+
+.img-logo{
+    width: 40px;
+    height: 40px;
+    float:right;
+}
+.boton-imagen
+{
+    background-color: orange;
+}
+
+div.container > p
+{
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: xx-large;
+}
+.foco-titulo
+{
+    color: orange;
+}
