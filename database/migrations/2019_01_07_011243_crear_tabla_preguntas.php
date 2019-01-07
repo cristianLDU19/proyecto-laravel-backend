@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class MigracionTablaPreguntas extends Migration
+class CrearTablaPreguntas extends Migration
 {
     /**
      * Run the migrations.
@@ -15,6 +15,7 @@ class MigracionTablaPreguntas extends Migration
     {
         Schema::create('preguntas', function (Blueprint $table) {
             $table->increments('id');
+            $table->timestamps();
             $table->string('descripcion');
             $table->string('opcion1');
             $table->string('opcion2');
