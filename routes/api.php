@@ -36,4 +36,6 @@ Route::get('receta/info/{slug}','recetasDP@showinfo');
 
 Route::post('/retos','retosDP@store');
 
-Route::post('/receta/','recetasDP@store');
+Route::post('/receta','recetasDP@store');
+
+Route::post('/preguntas','preguntasDP@store');
