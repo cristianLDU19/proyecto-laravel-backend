@@ -45,4 +45,10 @@ class retosDP extends Controller
 
     }
 
+    public function destroy( $id)
+    {
+        $user = reto::find($id);
+        $user->delete();
+    }
+
 }

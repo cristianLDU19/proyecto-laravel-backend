@@ -39,3 +39,5 @@ Route::post('/retos','retosDP@store');
 Route::post('/receta','recetasDP@store');
 
 Route::post('/preguntas','preguntasDP@store');
+
+Route::DELETE('/retos/{id}','retosDP@destroy');
