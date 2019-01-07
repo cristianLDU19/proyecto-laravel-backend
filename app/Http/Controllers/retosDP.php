@@ -37,12 +37,26 @@ class retosDP extends Controller
     }
     public function store(Request $request)
     {
+        $rec = new reto();
+        $rec = $request->input();
+
+        /*$rec->tipo = $request->input('tipo');
+         $rec->instruccion = $request->input('instruccion');
+         $rec->id_recetas = $request->input('id_recetas');
+         $rec->cantidad = $request->input('cantidad');
+         $rec->slug_receta = $request->input('slug_receta');
+ */
+        $rec->save();
+
+        return "desafio Guardada";
+
+        /*
         $ret = new reto();
         $ret->descripcion = $request->input('descripcion');
         $ret->save();
 
         return "Reto Guardada";
-
+*/
     }
 
     public function destroy( $id)
