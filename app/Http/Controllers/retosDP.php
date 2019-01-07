@@ -35,5 +35,14 @@ class retosDP extends Controller
 
         return $penitencia;
     }
+    public function store(Request $request)
+    {
+        $ret = new reto();
+        $ret->descripcion = $request->input('descripcion');
+        $ret->save();
+
+        return "Reto Guardada";
+
+    }
 
 }

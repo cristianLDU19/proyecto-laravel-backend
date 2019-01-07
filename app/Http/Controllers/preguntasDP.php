@@ -36,7 +36,24 @@ class preguntasDP extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rec = new pregunta();
+        $rec = $request->all();
+       /*
+        $rec->descripcion = $request->input('descripcion');
+        $rec->opcion1 = $request->input('opcion1');
+        $rec->opcion2 = $request->input('opcion2');
+        $rec->opcion3 = $request->input('opcion3');
+        $rec->opcion4 = $request->input('opcion4');
+        $rec->correcta = $request->input('correcta');
+        $rec->puntaje = $request->input('puntaje');
+        $rec->foto = $request->input('foto');
+        $rec->slug = $request->input('slug');
+        */
+
+        $rec->save();
+
+        return "Receta Guardada";
+
     }
 
     /**

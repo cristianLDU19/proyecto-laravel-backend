@@ -39,7 +39,16 @@ class recetasDP extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rec = new receta();
+        $rec->nombre = $request->input('nombre');
+        $rec->foto = $request->input('foto');
+        $rec->modalidad = $request->input('modalidad');
+        $rec->costo = $request->input('costo');
+        $rec->slug = $request->input('slug');
+        $rec->save();
+
+        return "Receta Guardada";
+
     }
 
     /**
