@@ -15,8 +15,9 @@ class CrearTablaRetos extends Migration
     {
         Schema::create('retos', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
+
             $table->string('descripcion');
+            $table->timestamps();
         });
     }
 

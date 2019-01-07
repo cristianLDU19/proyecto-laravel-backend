@@ -15,13 +15,14 @@ class CrearTablaPasos extends Migration
     {
         Schema::create('pasos', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
+
             $table->integer('id_receta');
             $table->string('instruccion');
             $table->integer('orden');
             $table->integer('duracion');
             $table->string('video');
             $table->string('slug_receta');
+            $table->timestamps();
         });
     }
 

@@ -15,7 +15,7 @@ class CrearTablaPreguntas extends Migration
     {
         Schema::create('preguntas', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
+
             $table->string('descripcion');
             $table->string('opcion1');
             $table->string('opcion2');
@@ -25,6 +25,7 @@ class CrearTablaPreguntas extends Migration
             $table->integer('puntaje');
             $table->string('foto');
             $table->string('slug');
+            $table->timestamps();
         });
     }
 

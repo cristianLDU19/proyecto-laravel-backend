@@ -15,12 +15,13 @@ class CrearTablaRecetas extends Migration
     {
         Schema::create('recetas', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
+
             $table->string('nombre');
             $table->string('foto');
             $table->string('modalidad');
             $table->integer('costo');
             $table->string('slug');
+            $table->timestamps();
         });
     }
 
