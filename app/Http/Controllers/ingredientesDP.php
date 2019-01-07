@@ -35,7 +35,17 @@ class ingredientesDP extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rec = new ingrediente();
+        $rec->nombre = $request->input('nombre');
+        $rec->tipo = $request->input('tipo');
+        $rec->instruccion = $request->input('instruccion');
+        $rec->id_recetas = $request->input('id_recetas');
+        $rec->cantidad = $request->input('cantidad');
+        $rec->slug_receta = $request->input('slug_receta');
+
+        $rec->save();
+
+        return "ingrediente Guardada";
     }
 
     /**

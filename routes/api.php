@@ -40,4 +40,10 @@ Route::post('/receta','recetasDP@store');
 
 Route::post('/preguntas','preguntasDP@store');
 
+Route::post('/pasos','pasosDP@store');
+
+Route::post('/ingredientes','ingredientesDP@store');
+
+Route::post('/desafios','desafiosDP@store');
+
 Route::DELETE('/retos/{id}','retosDP@destroy');

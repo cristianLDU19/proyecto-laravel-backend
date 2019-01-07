@@ -24,6 +24,20 @@ class pasosDP extends Controller
 
         return view('paso',compact('pa'));
     }
+    public function store(Request $request)
+    {
+        $rec = new paso();
+        $rec->id_receta = $request->input('id_receta');
+        $rec->instruccion = $request->input('instruccion');
+        $rec->orden = $request->input('orden');
+        $rec->duracion = $request->input('duracion');
+        $rec->video = $request->input('video');
+        $rec->slug_receta = $request->input('slug_receta');
 
+        $rec->save();
+
+        return "paso Guardada";
+
+    }
 
 }
