@@ -37,8 +37,8 @@ class preguntasDP extends Controller
     public function store(Request $request)
     {
         $rec = new pregunta();
-        $rec = $request->all();
-       /*
+       // $rec = $request->all();
+
         $rec->descripcion = $request->input('descripcion');
         $rec->opcion1 = $request->input('opcion1');
         $rec->opcion2 = $request->input('opcion2');
@@ -48,7 +48,7 @@ class preguntasDP extends Controller
         $rec->puntaje = $request->input('puntaje');
         $rec->foto = $request->input('foto');
         $rec->slug = $request->input('slug');
-        */
+
 
         $rec->save();
 
