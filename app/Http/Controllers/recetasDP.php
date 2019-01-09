@@ -114,6 +114,12 @@ class recetasDP extends Controller
         return $ingre;
     }
 
+    public function obtenerNumeroPasos($slug)
+    {
+        $rec = receta::select('numero_pasos')->where('slug', $slug)->get();
+        return $rec;
+    }
+
 
 //cuenta atras
     function countDown()

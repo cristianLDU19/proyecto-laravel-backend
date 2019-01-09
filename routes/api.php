@@ -47,3 +47,6 @@ Route::post('/ingredientes','ingredientesDP@store');
 Route::post('/desafios','desafiosDP@store');
 
 Route::DELETE('/retos/{id}','retosDP@destroy');
+
+Route::get('numeroPasos/{slug}','recetasDP@obtenerNumeroPasos');
+

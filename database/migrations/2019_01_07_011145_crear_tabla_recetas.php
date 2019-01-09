@@ -20,6 +20,7 @@ class CrearTablaRecetas extends Migration
             $table->string('foto');
             $table->string('modalidad');
             $table->integer('costo');
+            $table->integer('numero_pasos');
             $table->string('slug');
             $table->timestamps();
         });
