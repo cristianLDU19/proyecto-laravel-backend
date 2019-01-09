@@ -26,6 +26,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/retos','retosDP@retoAleatorio');
 
+Route::get('/obtenerPasos/{slug}','pasosDP@devolverPasos');
+
 Route::get('/pasos/{slug}/{num}','pasosDP@ordenPasos');//tiene que ser el slug
 
 Route::get('buscar/{slugRecet}','ingredientesDP@show');

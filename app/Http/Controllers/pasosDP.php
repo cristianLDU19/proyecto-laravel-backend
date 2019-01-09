@@ -24,6 +24,8 @@ class pasosDP extends Controller
 
         return view('paso',compact('pa'));
     }
+
+
     public function store(Request $request)
     {
         $rec = new paso();
