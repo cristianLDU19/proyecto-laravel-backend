@@ -38,6 +38,8 @@ Route::post('/retos','retosDP@store');
 
 Route::post('/receta','recetasDP@store');
 
+Route::get('/receta','recetasDP@index');
+
 Route::post('/preguntas','preguntasDP@store');
 
 Route::post('/pasos','pasosDP@store');
