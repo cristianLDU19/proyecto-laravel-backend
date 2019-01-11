@@ -54,3 +54,5 @@ Route::DELETE('/retos/{id}','retosDP@destroy');
 
 Route::get('numeroPasos/{slug}','recetasDP@obtenerNumeroPasos');
 
+Route::post('enviar','notificacionesDP@enviarMSJ');
+

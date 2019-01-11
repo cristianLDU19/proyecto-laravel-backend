@@ -14,7 +14,7 @@ class notificacionesDP extends Controller
         $message = $client->message()->send([
             'to' => '593986234897',
             'from' => 'Nexmo',
-            'text' => $categoria = $request->input('categoria')
+            'text' => $categoria = $request->input('mensaje')
         ]);
     }
 }
