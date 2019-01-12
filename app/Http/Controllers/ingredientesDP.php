@@ -56,7 +56,7 @@ class ingredientesDP extends Controller
      */
     public function show($slugReceta)
     {
-        $lista = ingrediente::where('slug-receta',$slugReceta)->get();
+        $lista = ingrediente::where('slug_receta',$slugReceta)->get();
         return $lista;
     }
 
