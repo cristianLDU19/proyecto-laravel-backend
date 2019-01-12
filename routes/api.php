@@ -31,6 +31,10 @@ Route::get('/preguntas','preguntasDP@index');
 
 Route::DELETE('/preguntas/{id}','preguntasDP@destroy');
 
+Route::get('preguntas/editar/{id}','preguntasDP@edit');
+
+Route::post('preguntas/editar/{id}','preguntasDP@update');
+
 //RETOS
 
 Route::get('/retos','retosDP@retoAleatorio');
@@ -41,7 +45,9 @@ Route::DELETE('/retos/{id}','retosDP@destroy');
 
 Route::get('/retos','retosDP@index');
 
-Route::put('/retos/actualizar/{id}','retosDP@update');
+Route::get('retos/editar/{id}','retosDP@edit');
+
+Route::post('retos/editar/{id}','retosDP@update');
 
 //PASOS
 
@@ -54,6 +60,10 @@ Route::post('/pasos','pasosDP@store');
 Route::DELETE('/pasos/{id}','pasosDP@destroy');
 
 Route::get('/pasos','pasosDP@index');
+
+Route::get('pasos/editar/{id}','pasosDP@edit');
+
+Route::post('pasos/editar/{id}','pasosDP@update');
 
 //RECETAS
 
@@ -69,6 +79,10 @@ Route::get('numeroPasos/{slug}','recetasDP@obtenerNumeroPasos');
 
 Route::DELETE('/receta/{id}','recetasDP@destroy');
 
+Route::get('receta/editar/{id}','recetasDP@edit');
+
+Route::post('receta/editar/{id}','recetasDP@update');
+
 //INGREDIENTES
 
 Route::get('buscar/{slugRecet}','ingredientesDP@show');
@@ -78,6 +92,10 @@ Route::post('/ingredientes','ingredientesDP@store');
 Route::DELETE('/ingredientes/{id}','ingredientesDP@destroy');
 
 Route::get('/ingredientes','ingredientesDP@index');
+
+Route::get('ingredientes/editar/{id}','ingredientesDP@edit');
+
+Route::post('ingredientes/editar/{id}','ingredientesDP@update');
 
 
 //MENSAJES

@@ -66,9 +66,10 @@ class ingredientesDP extends Controller
      * @param  \App\ingrediente  $ingrediente
      * @return \Illuminate\Http\Response
      */
-    public function edit(ingrediente $ingrediente)
+    public function edit( $id)
     {
-        //
+        $ingrediente = ingrediente::find($id);
+        return view ('editarIngredienetes',compact('ingrediente'));
     }
 
     /**
@@ -78,9 +79,20 @@ class ingredientesDP extends Controller
      * @param  \App\ingrediente  $ingrediente
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ingrediente $ingrediente)
+    public function update(Request $request,  $id)
     {
-        //
+        $ingrediente = ingrediente::find($id);
+        $ingrediente->nombre = $request->input('nombre');
+        $ingrediente->tipo = $request->input('tipo');
+        $ingrediente->instruccion = $request->input('instruccion');
+        $ingrediente->id_recetas = $request->input('id_recetas');
+        $ingrediente->cantidad = $request->input('cantidad');
+        $ingrediente->slug_receta = $request->input('slug_receta');
+
+        $ingrediente->save();
+
+        return "ingrediente actualizado";
+
     }
 
     /**

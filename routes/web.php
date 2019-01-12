@@ -11,34 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-//Route::resource('recetas', 'recetasDP');
 
 Route::get('recetas', 'recetasDP@index');
-
-Route::get('/inicio',function()
-{
-    return view('inicio');
-});
-
-Route::get('receta',function()
-{
-    return view('listaRecetas');
-});
-
-Route::get('trivia-de-comida',function()
-{
-    return view('trivia');
-});
-
-
-
-
-
-
 
 Route::get('pasos/{slug}','pasosDP@devolverPasos');//tiene que ser el slug
 
@@ -63,11 +38,6 @@ Route::get('receta/info/{slug}','recetasDP@showinfo');
 
 
 
-Route::get('/prueba',function()
-{
-    return view('layouts.plantilla');
-});
-
 
 
 
@@ -76,4 +46,9 @@ Route::get('mensajes',function ()
     return view('enviarmensaje');
 });
 
-Route::post('enviar','notificacionesDP@enviarMSJ');
+Route::get('receta/info/{slug}','recetasDP@showinfo');
+
+
+Route::get('ingredientes/editar/{id}','ingredientesDP@edit');
+
+Route::post('ingredientes/editar/{id}','ingredientesDP@update');

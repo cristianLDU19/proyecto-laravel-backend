@@ -55,12 +55,18 @@ class retosDP extends Controller
         return reto::all();
     }
 
-   /* public function update( $id,Request $request)
+    public function edit( $id)
     {
-        $reto = reto::find($id);
-        $reto->descripcion = $request->input('descripcion');
-        $reto->save();
+        $ingrediente = reto::find($id);
+        return view ('editarRetos',compact('ingrediente'));
+    }
+    public function update(Request $request,  $id)
+    {
+        $ingrediente = reto::find($id);
+        $ingrediente->descripcion = $request->input('descripcion');
+        $ingrediente->save();
 
-        return $reto;
-    }*/
+        return "Reto actualizado";
+
+    }
 }

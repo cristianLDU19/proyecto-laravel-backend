@@ -49,7 +49,7 @@ class preguntasDP extends Controller
         $rec->slug = $request->input('slug');
 
         $rec->save();
-        return "Receta Guardada";
+        return "Pregunta Guardada";
 
     }
 
@@ -71,9 +71,10 @@ class preguntasDP extends Controller
      * @param  \App\pregunta  $pregunta
      * @return \Illuminate\Http\Response
      */
-    public function edit(pregunta $pregunta)
+    public function edit($id)
     {
-        //
+        $ingrediente = pregunta::find($id);
+        return view ('editarPreguntas',compact('ingrediente'));
     }
 
     /**
@@ -83,9 +84,21 @@ class preguntasDP extends Controller
      * @param  \App\pregunta  $pregunta
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, pregunta $pregunta)
+    public function update(Request $request,  $id)
     {
-        //
+        $rec = pregunta::find($id);
+        $rec->descripcion = $request->input('descripcion');
+        $rec->opcion1 = $request->input('opcion1');
+        $rec->opcion2 = $request->input('opcion2');
+        $rec->opcion3 = $request->input('opcion3');
+        $rec->opcion4 = $request->input('opcion4');
+        $rec->correcta = $request->input('correcta');
+        $rec->puntaje = $request->input('puntaje');
+        $rec->foto = $request->input('foto');
+        $rec->slug = $request->input('slug');
+
+        $rec->save();
+        return "Pregunta Actualizaada";
     }
 
     /**
@@ -168,6 +181,7 @@ class preguntasDP extends Controller
 
 
     }
+
 
 
 

@@ -79,9 +79,10 @@ class recetasDP extends Controller
      * @param  \App\receta $receta
      * @return \Illuminate\Http\Response
      */
-    public function edit(receta $receta)
+    public function edit($id)
     {
-        //
+        $ingrediente = receta::find($id);
+        return view ('editarRecetas',compact('ingrediente'));
     }
 
     /**
@@ -91,9 +92,18 @@ class recetasDP extends Controller
      * @param  \App\receta $receta
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, receta $receta)
+    public function update(Request $request,  $id)
     {
-        //
+        $rec = receta::find($id);
+        $rec->nombre = $request->input('nombre');
+        $rec->foto = $request->input('foto');
+        $rec->modalidad = $request->input('modalidad');
+        $rec->costo = $request->input('costo');
+        $rec->numero_pasos = $request->input('numero_pasos');
+        $rec->slug = $request->input('slug');
+        $rec->save();
+        return "Receta Actualizaada";
+
     }
 
     /**

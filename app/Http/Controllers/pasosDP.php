@@ -51,4 +51,25 @@ class pasosDP extends Controller
     {
         return paso::all();
     }
+
+    public function edit( $id)
+    {
+        $ingrediente = paso::find($id);
+        return view ('editarPasos',compact('ingrediente'));
+    }
+    public function update(Request $request,  $id)
+    {
+        $rec = paso::find($id);
+        $rec->id_receta = $request->input('id_receta');
+        $rec->instruccion = $request->input('instruccion');
+        $rec->orden = $request->input('orden');
+        $rec->duracion = $request->input('duracion');
+        $rec->video = $request->input('video');
+        $rec->slug_receta = $request->input('slug_receta');
+        $rec->save();
+
+        return "paso Actualizado";
+
+    }
+
 }
