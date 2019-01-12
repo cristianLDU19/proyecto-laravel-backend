@@ -54,8 +54,8 @@ class pasosDP extends Controller
 
     public function edit( $id)
     {
-        $ingrediente = paso::find($id);
-        return $ingrediente;
+        //$ingrediente = paso::find($id);
+        return "hola";
         //return view ('editarPasos',compact('ingrediente'));
     }
     public function update(Request $request,  $id)
