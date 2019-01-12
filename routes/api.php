@@ -41,7 +41,7 @@ Route::DELETE('/retos/{id}','retosDP@destroy');
 
 Route::get('/retos','retosDP@index');
 
-Route::put('/retos','retosDP@update');
+Route::put('/retos/{id}','retosDP@update');
 
 //PASOS
 

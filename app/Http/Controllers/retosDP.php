@@ -60,5 +60,7 @@ class retosDP extends Controller
         $reto = reto::find($id);
         $reto->descripcion = $request->input('descripcion');
         $reto->save();
+
+        return $reto;
     }
 }
