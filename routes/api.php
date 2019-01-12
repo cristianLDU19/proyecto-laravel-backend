@@ -53,8 +53,6 @@ Route::post('retos/editar/{id}','retosDP@update');
 
 Route::get('/obtenerPasos/{slug}','pasosDP@devolverPasos');
 
-Route::get('/pasos/{slug}/{num}','pasosDP@ordenPasos');//tiene que ser el slug
-
 Route::post('/pasos','pasosDP@store');
 
 Route::DELETE('/pasos/{id}','pasosDP@destroy');

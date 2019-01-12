@@ -17,14 +17,6 @@ class pasosDP extends Controller
         return $listaPasos;
     }
 
-    public function ordenPasos($slugReceta,$num)
-    {
-        $pa=paso::where('slug_receta', $slugReceta)->where('orden', $num)->get();
-
-
-        return view('paso',compact('pa'));
-    }
-
 
     public function store(Request $request)
     {
