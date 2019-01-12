@@ -67,8 +67,6 @@ Route::post('pasos/editar/{id}','pasosDP@update');
 
 Route::get('receta/{slug}','recetasDP@show');
 
-Route::get('receta/info/{slug}','recetasDP@showinfo');
-
 Route::post('/receta','recetasDP@store');
 
 Route::get('/receta','recetasDP@index');

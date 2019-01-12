@@ -61,17 +61,10 @@ class recetasDP extends Controller
     {
 
         $rec = receta::where('slug', $slug)->get();
-        return view('recetaDetalle',compact('rec'));
-
-    }
-
-    public function showinfo($slug)
-    {
-
-        $rec = receta::where('slug', $slug)->get();
         return $rec ;
 
     }
+
 
     /**
      * Show the form for editing the specified resource.
