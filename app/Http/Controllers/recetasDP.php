@@ -42,8 +42,8 @@ class recetasDP extends Controller
         $rec->nombre = $request->input('nombre');
         $rec->foto = $request->input('foto');
         $rec->modalidad = $request->input('modalidad');
-        $rec->numero_pasos = $request->input('numero_pasos');
         $rec->costo = $request->input('costo');
+        $rec->numero_pasos = $request->input('numero_pasos');
         $rec->slug = $request->input('slug');
         $rec->save();
 
