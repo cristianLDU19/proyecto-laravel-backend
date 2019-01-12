@@ -15,7 +15,7 @@
         <h1 class="page-header" align="center">Editar Retos</h1>
 
 <div style="margin-left: 100px;margin-right: 100px">
-        <form method ="POST" action = '/retos/editar/{{$ingrediente->id}}' class="form-group" >
+        <form method ="POST" action = '/api/retos/editar/{{$ingrediente->id}}' class="form-group" >
             @csrf
             <div class = form-group>
                 <label>Descripcion:</label>

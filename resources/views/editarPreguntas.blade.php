@@ -15,7 +15,7 @@
         <h1 class="page-header" align="center">Editar Preguntas</h1>
 
 <div style="margin-left: 100px;margin-right: 100px">
-        <form method ="POST" action = '/preguntas/editar/{{$ingrediente->id}}' class="form-group" >
+        <form method ="POST" action = '/api/preguntas/editar/{{$ingrediente->id}}' class="form-group" >
             @csrf
             <div class = form-group>
                 <label>descripcion:</label>
