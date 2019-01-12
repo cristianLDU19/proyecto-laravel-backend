@@ -41,5 +41,14 @@ class pasosDP extends Controller
         return "paso Guardada";
 
     }
+    public function destroy( $id)
+    {
+        $user = paso::find($id);
+        $user->delete();
+    }
 
+    public function index()
+    {
+        return paso::all();
+    }
 }

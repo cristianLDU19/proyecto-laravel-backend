@@ -50,4 +50,8 @@ class retosDP extends Controller
         $user->delete();
     }
 
+    public function index()
+    {
+        return reto::all();
+    }
 }

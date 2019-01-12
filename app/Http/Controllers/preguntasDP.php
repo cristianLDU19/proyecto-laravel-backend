@@ -15,7 +15,7 @@ class preguntasDP extends Controller
      */
     public function index()
     {
-        //
+        return pregunta::all();
     }
 
     /**
@@ -37,7 +37,6 @@ class preguntasDP extends Controller
     public function store(Request $request)
     {
         $rec = new pregunta();
-       // $rec = $request->all();
 
         $rec->descripcion = $request->input('descripcion');
         $rec->opcion1 = $request->input('opcion1');
@@ -49,9 +48,7 @@ class preguntasDP extends Controller
         $rec->foto = $request->input('foto');
         $rec->slug = $request->input('slug');
 
-
         $rec->save();
-
         return "Receta Guardada";
 
     }
@@ -97,9 +94,10 @@ class preguntasDP extends Controller
      * @param  \App\pregunta  $pregunta
      * @return \Illuminate\Http\Response
      */
-    public function destroy(pregunta $pregunta)
+    public function destroy($id)
     {
-        //
+        $user = pregunta::find($id);
+        $user->delete();
     }
 
 /*

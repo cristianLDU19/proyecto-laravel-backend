@@ -17,7 +17,6 @@ class recetasDP extends Controller
     public function index()
     {
         $listaRecetas = receta::all();
-
         return $listaRecetas;
     }
 
@@ -103,15 +102,15 @@ class recetasDP extends Controller
      * @param  \App\receta $receta
      * @return \Illuminate\Http\Response
      */
-    public function destroy(receta $receta)
+    public function destroy( $id)
     {
-        //
+        $user = receta::find($id);
+        $user->delete();
     }
 
     public function mostrarIngredientes($id_receta)
     {
         $ingre = ingrediente::where('id_recetas', $id_receta)->get();
-
         return $ingre;
     }
 
@@ -121,14 +120,6 @@ class recetasDP extends Controller
         return $rec;
     }
 
-
-//cuenta atras
-    function countDown()
-    {
-        echo "
-";
-
-    }
 }
 
 

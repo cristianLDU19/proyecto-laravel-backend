@@ -14,7 +14,7 @@ class ingredientesDP extends Controller
      */
     public function index()
     {
-
+        return ingrediente::all();
     }
 
     /**
@@ -89,8 +89,9 @@ class ingredientesDP extends Controller
      * @param  \App\ingrediente  $ingrediente
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ingrediente $ingrediente)
+    public function destroy( $id)
     {
-        //
+        $user = ingrediente::find($id);
+        $user->delete();
     }
 }
