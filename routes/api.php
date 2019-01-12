@@ -61,7 +61,7 @@ Route::DELETE('/pasos/{id}','pasosDP@destroy');
 
 Route::get('/pasos','pasosDP@index');
 
-Route::get('pasos/editar/{id}','pasosDP@edit');
+Route::get('pasos/editar','pasosDP@edit');
 
 Route::post('pasos/editar/{id}','pasosDP@update');
 
