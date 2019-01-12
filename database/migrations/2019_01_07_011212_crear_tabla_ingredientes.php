@@ -22,6 +22,7 @@ class CrearTablaIngredientes extends Migration
             $table->integer('id_recetas');
             $table->integer('cantidad');
             $table->string('slug_receta');
+
             $table->timestamps();
 
         });
