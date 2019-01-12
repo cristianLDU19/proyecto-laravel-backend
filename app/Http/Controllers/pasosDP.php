@@ -9,12 +9,14 @@ use Illuminate\Http\Request;
 class pasosDP extends Controller
 {
 
-    public static function devolverPasos($slugReceta)
+    public static function devolverPasos($slugReceta,$orden)
     {
-        $listaPasos=paso::where('slug_receta', $slugReceta)->orderBy('orden')->get();
+        $Paso=paso::where('slug_receta', $slugReceta)
+            ->where('orden',$orden)
+            ->get();
 
 
-        return $listaPasos;
+        return $Paso;
     }
 
 

@@ -51,7 +51,7 @@ Route::post('retos/editar/{id}','retosDP@update');
 
 //PASOS
 
-Route::get('/obtenerPasos/{slug}','pasosDP@devolverPasos');
+Route::get('/obtenerPasos/{slug}/{orden}','pasosDP@devolverPasos');
 
 Route::post('/pasos','pasosDP@store');
 
