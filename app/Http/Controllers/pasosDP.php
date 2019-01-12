@@ -52,7 +52,7 @@ class pasosDP extends Controller
         return paso::all();
     }
 
-    public function edit( )
+    public function edit()
     {
         //$ingrediente = paso::find($id);
         return "hola";
