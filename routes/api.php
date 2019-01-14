@@ -40,7 +40,7 @@ Route::post('preguntas/editar/{id}','preguntasDP@update');
 
 //RETOS
 
-Route::get('/retos','retosDP@retoAleatorio');
+Route::get('/reto/aleatorio','retosDP@retoAleatorio');
 
 Route::post('/retos','retosDP@store');
 
